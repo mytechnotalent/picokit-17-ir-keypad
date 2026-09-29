@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-17-ir-keypad",
+  "eyebrow": "PICOKIT // LESSON 17",
+  "title": "PICOKIT // IR KEYPAD",
+  "subtitle": "REMOTE DIGITS + AUTHENTICATED HEARTBEAT",
+  "accent": "#009FFF",
+  "dim": "#00629E",
+  "white": "#D0E8FF",
+  "cyan": "#7FD8E0",
+  "bg": "#000B11",
+  "bg_edge": "#000305",
+  "icon": "key",
+  "panel_status": "PIN 1234  ·  DIG 4  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "REMOTE",
+      "value": "NEC"
+    },
+    {
+      "label": "PIN",
+      "value": "1234"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-35 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00017  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] keypad pin 1234  digits 4  lcd render",
+    "[+] ack sent  rssi -35  snr 9.0"
+  ],
+  "categories": [
+    "KEYPAD",
+    "DIGITS",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "KEY-01",
+      "label": "digits",
+      "value": "0-9"
+    },
+    {
+      "tag": "LCD-01",
+      "label": "1602",
+      "value": "i2c"
+    },
+    {
+      "tag": "TX-01",
+      "label": "heartbeat",
+      "value": "5 s"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ KEYPAD ]=="
+  ],
+  "layout": "split",
+  "stat": "NEC"
+}
